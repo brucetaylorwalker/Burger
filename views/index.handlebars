@@ -1,8 +1,9 @@
-<h1>Hambugers!</h1>
+<h1>Hamburgers!</h1>
+
 
 <h2>Burgers that are ready for your pie hole!</h2>
 
-<ul>
+<ul style="list-style-type:none">
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
@@ -10,9 +11,12 @@
   {{/each}}
 </ul>
 
+
+
 <h2>Burgers that have gone to a better place...</h2>
 
-<ul>
+
+<ul style="list-style-type:none">
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
@@ -33,6 +37,7 @@
     <input type="radio" name="devoured" value="1" checked> Devoured!<br>
     <input type="radio" name="devoured" value="0"> Mmm...smells good
   </div>
-
+  <div id="burger-button">
   <button type="submit">Add Burger</button>
+  </div>
 </form>
